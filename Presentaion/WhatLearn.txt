@@ -1,0 +1,24 @@
+1- usefrom
+ to there phace 
+    register ===> to Detemin all Input And Recover give uniq key
+     by name and option send configration (validation)
+    formState :{Error} ===> status of Error 
+    handleSubmit => to Detemined to function to Send FormData,
+
+2-Aioxs
+    How to Conect with Server 
+    Handel Error by (try & catch)  
+    Handel Loading
+
+3- Toast 
+    beautful Alert 
+
+4- Context state to check status of Token 
+
+5- Multi Layout 
+    use two route 
+
+
+
+    Onclcik="()=> nameoffucntion" ========> this Refrance not run work of click 
+    to run this function ()=> namefunction()
