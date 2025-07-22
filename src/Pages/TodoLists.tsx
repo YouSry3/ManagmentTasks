@@ -18,12 +18,15 @@ const TodoLists = ({
   onEditTodo,
   onDeleteTodo,
 }: ITodoListsProps) => {
+
   if (loading) return <TodosSkeleton intialofCard={5} />;
   if (error) return <p className="text-red-500">{error}</p>;
   if (!todos || todos.data.length === 0) return <p>No todos found.</p>;
 
   return (
+
     <div className="m-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      
       {todos.data.map((todo) => {
         const matchedStatus = Statuses.find(s => s.name === todo.todo_status);
 
