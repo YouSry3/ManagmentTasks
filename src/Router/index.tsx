@@ -14,7 +14,9 @@ const AppRoutes = () => {
     <Routes>
       {/* Layout خاص بالموقع كله */}
       <Route element={<MainLayout />}>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<ProtectedRoute>
+                                  <Home />
+                                  </ProtectedRoute>} />
         <Route
           path="/dashboard"
           element={
@@ -27,6 +29,7 @@ const AppRoutes = () => {
 
       {/* Layout خاص بـ Login و Register */}
       <Route element={<AuthLayout />}>
+      
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Route>
