@@ -15,6 +15,7 @@ export interface IRegisterProps {
 
 export interface IRegisterInputValidation {
   name: "username" | "email" | "password";
+  labelName: "Username" | "Email address" | "Password";
   placeholder: string;
   type: string;
   validation: {

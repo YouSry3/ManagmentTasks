@@ -39,6 +39,7 @@ export const FormTodo:IformTodoValidation[]=[
 export const REGISTER_FORM: IRegisterInputValidation[] = [
   {
     name: "username",
+    labelName: "Username",
     placeholder: "Username",
     type: "text",
     validation: {
@@ -51,6 +52,7 @@ export const REGISTER_FORM: IRegisterInputValidation[] = [
   },
   {
     name: "email",
+    labelName: "Email address",
     placeholder: "Email address",
     type: "email",
     validation: {
@@ -63,6 +65,7 @@ export const REGISTER_FORM: IRegisterInputValidation[] = [
   },
   {
     name: "password",
+    labelName: "Password",
     placeholder: "Password",
     type: "password",
     validation: {

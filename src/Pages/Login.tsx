@@ -115,7 +115,7 @@ const Login = () => {
             ))}
 
             <Button fullWidth isLoading={IsLoading} type="submit"
-                    className="  h-11 rounded-full text-white bg-indigo-500 hover:opacity-90 transition-opacity"
+                    className="h-11 rounded-full text-white bg-indigo-500 hover:opacity-90 transition-opacity"
             >
               Login
             </Button>
