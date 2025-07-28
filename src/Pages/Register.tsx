@@ -8,7 +8,7 @@ import Button from "../Components/UI/Button";
 import axiosInstance from "../Config/Axios.config";
 import toast from "react-hot-toast";
 import type { AxiosError } from "axios";
-import {  Link, useNavigate } from "react-router-dom";
+import {   useNavigate } from "react-router-dom";
 import Label from "../Components/UI/Label";
 
 const Register = () => {
@@ -114,7 +114,7 @@ const Register = () => {
             <p className="text-sm text-gray-500/90 mt-3">
               Do have an account?{" "}
               <a
-                href="/Login"
+                href="/login"
                 className="text-indigo-500 hover:underline"
               >
                 Login
