@@ -122,12 +122,13 @@ const Login = () => {
             </Button>
             <p className="text-sm text-gray-500/90 mt-3">
               Don't have an account?{" "}
-              <a
-                href="/register"
+              <button
+                type="button"
+                onClick={() => location.replace("/register")}
                 className="text-indigo-500 hover:underline"
               >
                 Sign up
-              </a>
+              </button>
             </p>
           </form>
         </div>

@@ -54,7 +54,9 @@ const Register = () => {
     }
 
   };
-
+      const url = ()=>{
+        navigate("/login");
+      }
   return (
     <div className="flex w-full h-screen overflow-hidden">
         <div className="w-full hidden md:inline-block">
@@ -113,12 +115,14 @@ const Register = () => {
             </Button>
             <p className="text-sm text-gray-500/90 mt-3">
               Do have an account?{" "}
-              <a
-                href="/login"
+              <button
+                onClick={url}
+                type="button"
+                
                 className="text-indigo-500 hover:underline"
               >
                 Login
-              </a>
+              </button>
             </p>
           </form>
         </div>
