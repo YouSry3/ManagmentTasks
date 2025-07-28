@@ -7,11 +7,12 @@ import Button from "../Components/UI/Button";
 import Input from "../Components/UI/Input";
 import Label from "../Components/UI/Label";
 import type { IErrorResponse, ILoginProps } from "../interface";
-import { LOGIN_FORM } from "../Data";
+import { imageUrl, LOGIN_FORM } from "../Data";
 import { useState } from "react";
 import axiosInstance from "../Config/Axios.config";
 import toast from "react-hot-toast";
 import type { AxiosError } from "axios";
+
 
 // }
 
@@ -64,11 +65,11 @@ const Login = () => {
   };
   return (
     <>
-      <div className="flex w-full h-screen overflow-hidden">
+    <div className="flex w-full h-screen overflow-hidden">
         <div className="w-full hidden md:inline-block">
           <img
             className="h-full"
-            src="/public/BackgroundLoginForm.webp"
+            src={imageUrl}
             alt="leftSideImage"
           />
         </div>

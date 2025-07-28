@@ -2,7 +2,7 @@ import {  useForm, type SubmitHandler } from "react-hook-form";
 import type { IErrorResponse, IRegisterProps } from "../interface";
 import Input from "../Components/UI/Input";
 import { useState } from "react";
-import { REGISTER_FORM } from "../Data";
+import { imageUrl, REGISTER_FORM } from "../Data";
 import InputErrorMessage from "../Components/Error/InputErrorMessage";
 import Button from "../Components/UI/Button";
 import axiosInstance from "../Config/Axios.config";
@@ -60,7 +60,7 @@ const Register = () => {
         <div className="w-full hidden md:inline-block">
           <img
             className="h-full"
-            src="/public/BackgroundLoginForm.webp"
+            src={imageUrl}
             alt="leftSideImage"
           />
         </div>
