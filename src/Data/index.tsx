@@ -78,6 +78,7 @@ export const REGISTER_FORM: IRegisterInputValidation[] = [
 export const LOGIN_FORM: ILoginInputValidation[] = [
   {
     name: "identifier",
+    labelName:"Email address",
     placeholder: "Email address",
     type: "email",
     validation: {
@@ -90,6 +91,7 @@ export const LOGIN_FORM: ILoginInputValidation[] = [
   },
   {
     name: "password",
+    labelName:"Password",
     placeholder: "Password",
     type: "password",
     validation: {

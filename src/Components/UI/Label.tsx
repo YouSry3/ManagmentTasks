@@ -1,12 +1,11 @@
 // Components/UI/Label.tsx
 interface ILabelProps {
-  htmlFor?: string;
   children?: React.ReactNode;
 }
 
-const Label = ({ children, htmlFor }: ILabelProps) => {
+const Label = ({ children }: ILabelProps) => {
   return (
-    <label htmlFor={htmlFor} className="block text-sm font-medium text-gray-700 mb-1">
+    <label  className="text-sm font-medium text-gray-700 mb-1">
       {children}
     </label>
   );

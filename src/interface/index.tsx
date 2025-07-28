@@ -36,6 +36,7 @@ export interface ILoginProps {
 }
 export interface ILoginInputValidation {
   name: "identifier" | "password";
+  labelName:"Email address" | "Password";
   placeholder: string;
   type: string;
   validation: {
