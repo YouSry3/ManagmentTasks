@@ -16,7 +16,7 @@ A full-featured ToDo web application built with **React**, featuring authenticat
 - 🎨 **Tailwind CSS** for modern responsive UI
 - 📡 **Axios Integration** with a Strapi backend API
 - 🔔 **Toast Notifications** for success/error feedback
-- 🧼 Clean Code & Component-Based Architecture
+- 🧼 Clean Code & Best Practise & Component-Based Architecture
 
 ---
 
