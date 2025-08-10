@@ -6,6 +6,7 @@ const data = [
   { name: "In Progress", value: 20 },
   { name: "Pending", value: 15 },
 ];
+// 
 
 const COLORS = ["#4CAF50", "#FFC107", "#F44336"];
 
