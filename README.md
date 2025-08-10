@@ -55,6 +55,7 @@ src/
 2. Install dependencies:
    ```bash
    npm install
+   yarn dev
    ```
 
 3. Add environment variables:
