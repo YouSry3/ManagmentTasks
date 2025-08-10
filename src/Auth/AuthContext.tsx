@@ -24,7 +24,11 @@ export const useAuth = () => {
 };
 
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
-  const [user, setUser] = useState<User | null>(null);
+  const [user, setUser] = useState<User | null>(() => {
+  const stored = localStorage.getItem("loggedInUser");
+  return stored ? JSON.parse(stored) : null;
+  });
+
 
   useEffect(() => {
     const stored = localStorage.getItem("loggedInUser");

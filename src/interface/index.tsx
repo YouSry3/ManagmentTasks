@@ -6,7 +6,11 @@ export interface IStatus {
   color: string;
 }
  
+export interface ISideBar{
+  title:string;
+  Url?:string;
 
+}
 
 export interface IRegisterProps {
 

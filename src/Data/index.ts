@@ -1,4 +1,4 @@
-import type { IformTodoValidation, ILoginInputValidation, IRegisterInputValidation, IStatus } from "../interface";
+import type { IformTodoValidation, ILoginInputValidation, IRegisterInputValidation, ISideBar, IStatus } from "../interface";
 
 
 
@@ -10,6 +10,11 @@ export const Statuses: IStatus[] = [
   { name: "completed", label: "Completed", color: "bg-green-500" },
 ];
 
+export const SideBar:ISideBar[] =[
+    {title:"🏠 Home",Url:"/"},
+    {title:"📊 Dashboard",Url:"Dashboard"},
+    {title:"⚙ Settings",Url:"Settings"}
+]
 
 export const FormTodo:IformTodoValidation[]=[
   {
