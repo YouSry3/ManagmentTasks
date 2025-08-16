@@ -39,7 +39,7 @@ src/
 ## 🧪 Tech Stack
 
 - **Frontend**: React, React Router, Context API, Axios, Tailwind CSS
-- **Backend**: Strapi (External)
+- **Backend**: Node Js (External)
 - **Auth**: JWT (stored in localStorage)
 
 ---
