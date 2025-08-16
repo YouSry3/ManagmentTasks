@@ -3,7 +3,7 @@
 
 A full-featured ToDo web application built with **React**, featuring authentication, CRUD functionality, and a modern UI.
 
-[🔗 Live Demo](https://todoapp-xi-hazel.vercel.app/) | [📦 GitHub Repo](https://github.com/YouSry3/ToDoFront)
+[🔗 Live Demo](https://todoapp-xi-hazel.vercel.app/) |[📦 GitHub Back End Repo](https://github.com/YouSry3/TodoBackend)
 
 ---
 
@@ -82,6 +82,7 @@ src/
 ---
 
 ## 👨‍💻 Author
-Back End by [Node.js]([https://github.com/YouSry3](https://github.com/YouSry3/TodoBackend))
-
+Back End by [🔗Node.js]([https://github.com/YouSry3](https://github.com/YouSry3/TodoBackend))
+|
 Developed by [@YouSry3](https://github.com/YouSry3)
+
