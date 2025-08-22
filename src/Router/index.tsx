@@ -17,9 +17,7 @@ const AppRoutes = () => {
         <Route path="/" element={
           <ProtectedRoute>
             <Home />
-          </ProtectedRoute>
-          
-                                  } />
+          </ProtectedRoute>} />
         <Route
           path="/dashboard"
           element={
