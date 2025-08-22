@@ -11,6 +11,7 @@ const Dashboard = () => {
 
   // Count completed and pending todos
   const completedCount = todos?.data.filter(todo=> todo.todo_status === Statuses[2].name).length || 0;
+  // Count pending todos
   const pendingCount = todos?.data.filter(todo=> todo.todo_status === Statuses[0].name).length || 0;
 
   // Prepare data for PieChart
