@@ -1,5 +1,7 @@
 // Pages/Dashboard.tsx
 import { PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer } from "recharts";
+import { useAuth } from "../Auth/AuthContext";
+import useTodos from "../Hooks/useTodos";
 
 const data = [
   { name: "Completed Tasks", value: 65 },
@@ -9,6 +11,9 @@ const data = [
 // 
 
 const COLORS = ["#4CAF50", "#FFC107", "#F44336"];
+const {user} = useAuth();
+
+const {todos} = useTodos(user?.jwt);
 
 const Dashboard = () => {
   return (
