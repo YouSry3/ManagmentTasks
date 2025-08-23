@@ -22,6 +22,7 @@ const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedStatus, setSelectedStatus] = useState<IStatus>(Statuses[0]);
   const [editTodo, setEditTodo] = useState<Todo | null>(null);
+  const [IsLoading, setIsLoading] = useState(false);
 
 
 
@@ -62,6 +63,8 @@ const Home = () => {
   });
 
   const onSubmit = async (data: Todo) => {
+    setIsLoading(true);
+
     const fullData = {
       ...data,
       todo_status: selectedStatus.name,
@@ -80,6 +83,7 @@ const Home = () => {
         );
 
         if (response.status === 200) {
+          
           updateTodo(response.data.data);
         toast.success(
         <div className="flex items-center gap-2">
@@ -109,7 +113,12 @@ const Home = () => {
     } catch (error) {
       toast.error("Something went wrong ❌");
     }
+    finally {
+      setIsLoading(false);
+    }
   };
+
+
 
   return (
     <>
@@ -188,8 +197,9 @@ const Home = () => {
           ))}
 
           <div className="flex justify-end space-x-2 mt-5">
-            <Button type="submit" fullWidth variant="default">
-              {editTodo ? "Update" : "Create"}
+            <Button type="submit" fullWidth variant="default"  isLoading={IsLoading}>
+              
+              {editTodo ? "Update Todo" : "Add Todo"  }
             </Button>
             <Button type="button" onClick={closeModal} fullWidth variant="cancel">
               Cancel
