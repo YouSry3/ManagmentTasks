@@ -23,6 +23,11 @@ const Home = () => {
   const [selectedStatus, setSelectedStatus] = useState<IStatus>(Statuses[0]);
   const [editTodo, setEditTodo] = useState<Todo | null>(null);
 
+
+
+
+
+
   const {
     todos,
     loading,
@@ -126,6 +131,7 @@ const Home = () => {
           setIsOpen(true);
           setTimeout(() => reset(todo), 0);
         }}
+
         onDeleteTodo={async (id) => {
           try {
             await axiosInstance.delete(`/todos/${id}`, {
@@ -191,6 +197,8 @@ const Home = () => {
           </div>
         </form>
       </Model>
+
+    
     </>
   );
 };
