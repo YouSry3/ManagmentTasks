@@ -25,7 +25,7 @@ const TodoLists = ({
 
   return (
 
-    <div className="m-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+    <div className="m-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
       
       {todos.data.map((todo) => {
         const matchedStatus = Statuses.find(s => s.name === todo.todo_status);
