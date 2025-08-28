@@ -90,23 +90,25 @@ const TodoLists = ({
               description="Deleting this product will remove it permanently from your inventory. Any associated data, sales history, and other related information will also be deleted. Please make sure this is the intended action."
             >
               <div className="flex items-center space-x-3">
-                <Button 
+          <Button 
                 variant={"danger"}
                 fullWidth
                 
                  onClick={() => {
                   onDeleteTodo?.(Number(todo.id));
                   closeConfirmModal();
-                }} type="button">
+                }}
+                 type="button">
                   Yes, remove
-                </Button>
-                <Button 
+          </Button>
+
+          <Button 
                 type="button"
                 variant={"cancel"}
                  
                  onClick={closeConfirmModal}>
                   Cancel
-                </Button>
+          </Button>
               </div>
             </Model>
           </div>
