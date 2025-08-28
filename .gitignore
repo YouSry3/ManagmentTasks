@@ -1,19 +1,23 @@
-# Node
+# dependencies
 node_modules/
 
-# Build output
+# build
 dist/
 dist-ssr/
 *.local
 
-# Logs
+# env
+.env
+.env.* 
+!.env.example
+
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-lerna-debug.log*
 
-# Editor stuff
+# editor
 .vscode/
 .idea/
 *.suo
@@ -22,13 +26,9 @@ lerna-debug.log*
 *.sln
 *.sw?
 .DS_Store
+Thumbs.db
 
-# Env files (معلومات حساسة زي مفاتيح API)
-.env
-.env.*
-!.env.example
-
-# Cache
+# cache
 .cache/
 .tmp/
 .eslintcache
