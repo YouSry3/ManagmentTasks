@@ -16,6 +16,7 @@ import Select from "../Components/UI/Select";
 import TodoLists from "./TodoLists";
 
 import useTodos from "../Hooks/useTodos";
+import BlurText from "@/Components/UI/BlurText";
 
 const Home = () => {
   const { user } = useAuth();
@@ -123,8 +124,19 @@ const Home = () => {
   return (
     <>
       <div className="container mx-auto p-4">
-        <h1 className="text-2xl font-bold mb-4">Todo List</h1>
-        <Button variant="default" onClick={openModal}>
+          <BlurText
+            text="TodoList Application"
+            animateBy="words"
+            delay={300}
+            stepDuration={0.5}
+            className="text-3xl text-gray-800 font-semibold"
+            animationFrom={{ opacity: 0, scale: 0.5, y: 50 }}
+            animationTo={[
+              { opacity: 0.5, scale: 1.05, y: -10 },
+              { opacity: 1, scale: 1, y: 0 },
+            ]}
+          />
+        <Button  variant="default" onClick={openModal} className="mt-4">
           Add New Todo
         </Button>
       </div>

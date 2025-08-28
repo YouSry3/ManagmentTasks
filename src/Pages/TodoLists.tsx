@@ -24,16 +24,18 @@ const TodoLists = ({
   const [isOpenConfirmModal, setIsOpenConfirmModal] = useState(false);
   const [todoToDelete, setTodoToDelete] = useState<Todo | null>(null);
 
+// Filtering state
+  const [currentStatus, setCurrentStatus] = useState<string>("All");
+  const [filteredTodos, setFilteredTodos] = useState<Todo[]>([]);
+
+  // Modal handlers
   const closeConfirmModal = () => setIsOpenConfirmModal(false);
   const openConfirmModal = (todo: Todo) => {
     setTodoToDelete(todo);
     setIsOpenConfirmModal(true);
   };
 
-  // 🆕 فلترة
-  const [currentStatus, setCurrentStatus] = useState<string>("All");
-  const [filteredTodos, setFilteredTodos] = useState<Todo[]>([]);
-
+// Effect to filter todos based on currentStatus
   useEffect(() => {
     if (!todos?.data) return;
 
@@ -46,13 +48,15 @@ const TodoLists = ({
     }
   }, [todos, currentStatus]);
 
+  // Render logic
   if (loading) return <TodosSkeleton intialofCard={5} />;
+// there's an error
   if (error) return <p className="text-red-500">{error}</p>;
+  // If no todos available
   if (!todos || todos.data.length === 0) return <p>No todos found.</p>;
 
   return (
     <>
-      {/* أزرار الفلترة */}
       <div className="filter flex items-center justify-center space-x-4 mt-4">
         {BTNSFilterStatus.map((status, index) => (
           <Button
