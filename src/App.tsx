@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom'
 import './App.css'
 import { Toaster } from "react-hot-toast";
 
+
 import Router from './Router'
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
    <BrowserRouter>
       <Router />
       <Toaster />
+
     </BrowserRouter>
 
   </>

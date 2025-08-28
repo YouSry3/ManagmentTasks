@@ -56,7 +56,8 @@ export interface ILoginInputValidation {
     };
   };
 }
-
+// Todo.todo_status: "pending" | "inprogress" | "completed"
+export const BTNSFilterStatus:string[] = ["All", "pending", "inprogress", "completed"];
 
 export interface IformTodoValidation{
   name: "title" | "description";

@@ -18,7 +18,7 @@ import TodoLists from "./TodoLists";
 import useTodos from "../Hooks/useTodos";
 
 const Home = () => {
-  // States
+  const { user } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
   const [selectedStatus, setSelectedStatus] = useState<IStatus>(Statuses[0]);
   const [editTodo, setEditTodo] = useState<Todo | null>(null);
@@ -27,8 +27,7 @@ const Home = () => {
 
 
 
-// Custom Hooks
-  const { user } = useAuth();
+
 
   const {
     todos,
@@ -40,7 +39,18 @@ const Home = () => {
     
   } = useTodos(user?.jwt);
 
-// React Hook Form
+  const openModal = () => setIsOpen(true);
+  const closeModal = () => {
+    reset({
+      title: "",
+      description: "",
+      todo_status: Statuses[0].name,
+    });
+    setIsOpen(false);
+    setEditTodo(null);
+    setSelectedStatus(Statuses[0]);
+  };
+
   const {
     register,
     handleSubmit,
@@ -51,19 +61,6 @@ const Home = () => {
       todo_status: Statuses[0].name,
     },
   });
-
-//  Functions Handelers
-    const openModal = () => setIsOpen(true);
-    const closeModal = () => {
-      reset({
-        title: "",
-        description: "",
-        todo_status: Statuses[0].name,
-      });
-      setIsOpen(false);
-      setEditTodo(null);
-      setSelectedStatus(Statuses[0]);
-    };
 
   const onSubmit = async (data: Todo) => {
     setIsLoading(true);

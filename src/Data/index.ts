@@ -4,6 +4,8 @@ import type { IformTodoValidation, ILoginInputValidation, IRegisterInputValidati
 
 export const imageUrl = "https://marketplace.canva.com/EAFB4DwUCvk/2/0/1131w/canva-white-paper-creative-printable-to-do-list-checklist-3YM72GN5G1g.jpg"
 
+export const BTNsfilter : string[] = ["All","Pending","In Progress","Completed"]  
+
 export const Statuses: IStatus[] = [
   { name: "pending", label: "Pending", color: "bg-yellow-500" },
   { name: "inprogress", label: "In Progress", color: "bg-blue-500" },
